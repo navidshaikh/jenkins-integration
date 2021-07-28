@@ -6,6 +6,9 @@ pipeline {
             label 'master'
         }
     }
+    parameters {
+        string(description: 'test_param', name: 'TEST', defaultValue: 'test value 1')
+    }
     stages {
         stage("test") {
             steps {
